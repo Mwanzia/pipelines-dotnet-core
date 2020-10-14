@@ -22,7 +22,7 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: publishBuildArtifacts
   inputs:
-    PathtoPublish: '$(System.DefaultWorkingDirectory)'
-    ArtifactName: 'pipelines-dotnet-core'
-    publishLocation: 'FilePath'
-    TargetPath: 'c:\inetpub'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'BuildOutputs'
+    publishLocation: Container
+
